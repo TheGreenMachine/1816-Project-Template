@@ -20,6 +20,10 @@ deploy {
         artifact('frcJava', jaci.openrio.gradle.frc.FRCJavaArtifact) {
             targets << "roborio"
         }
+        fileCollectionArtifact("properties"){
+            files = fileTree( dir: "properties")
+            targets << "roborio"
+        }
     }
 }
 
@@ -41,5 +45,5 @@ jar {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.4'
+    gradleVersion = '4.9'
 }
