@@ -66,7 +66,7 @@ public class ButtonShim {
 	 * @param command
 	 *            The command to be forwarded to the internal button of this
 	 *            button shim.
-	 * @see Button#cancelWhenPressed(Command)
+	 * @see Button#cancelWhenPressed(edu.wpi.first.wpilibj.command.Command)
 	 */
 	public void cancelWhenPressed(Command command) {
 		if (isActive()) {
@@ -76,11 +76,11 @@ public class ButtonShim {
 
 	/**
 	 * Forwards this call to the button used internally by this button shim.
-	 *
+	 * 
 	 * @param command
 	 *            The command to be forwarded to the internal button of this
 	 *            button shim.
-	 * @see Button#toggleWhenPressed(Command)
+	 * @see Button#toggleWhenPressed(edu.wpi.first.wpilibj.command.Command)
 	 */
 	public void toggleWhenPressed(Command command) {
 		if (isActive()) {
@@ -90,11 +90,11 @@ public class ButtonShim {
 
 	/**
 	 * Forwards this call to the button used internally by this button shim.
-	 *
+	 * 
 	 * @param command
 	 *            The command to be forwarded to the internal button of this
 	 *            button shim.
-	 * @see Button#whenPressed(Command)
+	 * @see Button#whenPressed(edu.wpi.first.wpilibj.command.Command)
 	 */
 	public void whenPressed(Command command) {
 		if (isActive()) {
@@ -104,11 +104,11 @@ public class ButtonShim {
 
 	/**
 	 * Forwards this call to the button used internally by this button shim.
-	 *
+	 * 
 	 * @param command
 	 *            The command to be forwarded to the internal button of this
 	 *            button shim.
-	 * @see Button#whenReleased(Command)
+	 * @see Button#whenReleased(edu.wpi.first.wpilibj.command.Command)
 	 */
 	public void whenReleased(Command command) {
 		if (isActive()) {
@@ -118,11 +118,11 @@ public class ButtonShim {
 
 	/**
 	 * Forwards this call to the button used internally by this button shim.
-	 *
+	 * 
 	 * @param command
 	 *            The command to be forwarded to the internal button of this
 	 *            button shim.
-	 * @see Button#whileHeld(Command)
+	 * @see Button#whileHeld(edu.wpi.first.wpilibj.command.Command)
 	 */
 	public void whileHeld(Command command) {
 		if (isActive()) {

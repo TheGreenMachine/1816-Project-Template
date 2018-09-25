@@ -3,7 +3,7 @@ package frc.team1816.robot;
 public class Controls {
     private static Controls instance;
 
-    public Controls() {
+    private Controls() {
 
     }
 

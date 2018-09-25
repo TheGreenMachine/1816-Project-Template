@@ -1,6 +1,7 @@
 package com.edinarobotics.utils.gamepad.buttons;
 
 import com.edinarobotics.utils.gamepad.Gamepad;
+
 import edu.wpi.first.wpilibj.buttons.Button;
 
 public class DPadButton extends Button {
