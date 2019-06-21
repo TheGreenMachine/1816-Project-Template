@@ -2,10 +2,9 @@ package com.edinarobotics.utils.gamepad;
 
 import com.edinarobotics.utils.gamepad.buttons.DPadButton;
 import com.edinarobotics.utils.math.Vector2;
-
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.Joystick;
 
 
 public class Gamepad {
@@ -17,6 +16,10 @@ public class Gamepad {
     private Button middleLeft, middleRight;
     private Button leftJoystickButton, rightJoystickButton;
     private Button dPadLeft, dPadDown, dPadRight, dPadUp;
+
+    private Vector2 left;
+    private Vector2 right;
+    private GamepadAxisState gamepadAxisState;
 	
 	public Gamepad(int port) {
 		joystick = new Joystick(port);
@@ -39,6 +42,9 @@ public class Gamepad {
         dPadUp = new DPadButton(this, DPadButton.DPadButtonType.UP);
         dPadDown = new DPadButton(this, DPadButton.DPadButtonType.DOWN);
 
+        left = new Vector2(0, 0);
+        right = new Vector2(0, 0);
+        gamepadAxisState = new GamepadAxisState(left, right);
 	} 
 	
 	/**
@@ -257,10 +263,10 @@ public class Gamepad {
      * @return A GamepadAxisState object containing the states of all the
      * joystick axes on this Gamepad.
      */
-    public GamepadAxisState getGamepadAxisState(){
-        Vector2 left = new Vector2(getLeftX(), getLeftY());
-        Vector2 right = new Vector2(getRightX(), getRightY());
-        return new GamepadAxisState(left, right);
+    public GamepadAxisState getGamepadAxisState() {
+        left.set(getLeftX(), getLeftY());
+        right.set(getRightX(), getRightY());
+        return gamepadAxisState;
     }
 
 	public int getDPadY() {

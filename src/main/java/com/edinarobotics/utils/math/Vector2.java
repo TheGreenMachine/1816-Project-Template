@@ -1,7 +1,5 @@
 package com.edinarobotics.utils.math;
 
-import java.lang.Math;
-
 /**
  * This class implements a 2-dimensional vector and associated mathematical
  * operations.
@@ -16,7 +14,7 @@ public class Vector2 extends Point2 {
     public Vector2(double x, double y){
         super(x, y);
     }
-    
+
     /**
      * Returns a String representation of this Vector2.
      * 
